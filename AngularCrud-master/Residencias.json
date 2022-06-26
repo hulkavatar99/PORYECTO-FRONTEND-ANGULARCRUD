@@ -1,0 +1,18 @@
+{
+  "residencias": [
+    {
+      "nombreProyecto": "choto",
+      "numIntegrantes": "2",
+      "fechaInicio": "2022-06-15T05:00:00.000Z",
+      "carrera": "ISIC",
+      "id": 1
+    },
+    {
+      "nombreProyecto": "hola",
+      "numIntegrantes": "5",
+      "fechaInicio": "2022-06-28T05:00:00.000Z",
+      "carrera": "ISIC",
+      "id": 2
+    }
+  ]
+}

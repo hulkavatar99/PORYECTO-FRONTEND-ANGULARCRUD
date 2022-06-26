@@ -1,0 +1,52 @@
+<h1 mat-dialog-title>Agregar Residencia</h1>
+
+<!--Formulario-->
+<div mat-dialog-content>
+    <form [formGroup]="resiForm">
+    <!--Nombre del proyecto-->
+        <mat-form-field appearance="outline">
+            <mat-label>Nombre del proyecto</mat-label>
+            <input formControlName="nombreProyecto" matInput placeholder="name proyect">     
+            <mat-hint>Hint</mat-hint>
+        </mat-form-field>
+
+    <!--Numero de integrantes--> 
+    
+        <mat-form-field appearance="outline">
+            <mat-label>Numero de integrantes</mat-label>
+            <mat-select formControlName="numIntegrantes" placeholder="numero integrantes">
+                <mat-option value="1">1</mat-option>
+                <mat-option value="2">2</mat-option>
+                <mat-option value="3">3</mat-option>
+                <mat-option value="4">4</mat-option>
+                <mat-option value="5">5</mat-option>
+            </mat-select>   
+        </mat-form-field>
+    
+
+    <!--Fecha de inicio del proyecto-->
+        <mat-form-field appearance="outline">
+            <mat-label>Fecha de inicio del proyecto</mat-label>
+            <input formControlName="fechaInicio" matInput [matDatepicker]="picker">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+     <!--carrera-->
+        <mat-form-field appearance="outline">
+            <mat-label>Carrera</mat-label>
+                <mat-select formControlName="carrera" placeholder="numero integrantes">
+                    <mat-option value="ISIC">Ingenieria en sistemas computacionales</mat-option>
+                    <mat-option value="IGE">Ingenieria en gestion empresarial</mat-option>
+                    <mat-option value="ITIC">Ingenieria en tecnologias de la informacion y la comunicacion</mat-option>
+                </mat-select>   
+        </mat-form-field>
+  
+    </form>     
+    
+</div>
+<div mat-dialog-actions [align]="'end'">
+    <button mat-raised-button color="warn" mat-dialog-close>Cancelar</button>
+    <button mat-raised-button color="primary" (click)="addResidencias()" >{{actionBtn}}</button>
+
+</div>
